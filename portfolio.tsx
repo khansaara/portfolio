@@ -106,53 +106,12 @@ export default function SaaraKhanPortfolio() {
   }
 
   const downloadResume = () => {
-    // Create a sample resume content
-    const resumeContent = `
-SAARA KHAN
-CATALOG LEAD · RETAIL EXPERT
-Marathahalli, Bengaluru, Karnataka 560037, India
-(+91) 8299-063-804 | itsaarakhan@gmail.com
-
-SUMMARY
-Detail-oriented professional with 3+ years of experience in team management and product support. 
-Known for simplifying complex workflows into efficient, user-friendly systems and maintaining 
-strong vendor/client relationships.
-
-EXPERIENCE
-Amazon - Retail Business Service (January 2024 - Present)
-CATALOG LEAD
-• Led team performance initiatives, improving headcount efficiency from 2.88 to 4.12
-• Conducted weekly/monthly business reviews for AU/ZA Retail
-• Managed 20+ L2 associates with manager rating of 4.8/5
-• Improved team productivity from 99% to 112% through coaching
-
-Amazon - Retail Business Service Flex org (November 2022 - December 2023)
-CATALOG ASSOCIATE
-• Served as interim lead managing scorecards and performance reviews
-• Automated data workflows using Excel and built visualizations in AWS QuickSight
-• Led High Visibility Events coordination as Subject Matter Expert
-• Supported team of 50+ associates as Performance Improvement Coach
-
-SKILLS
-• Vendor Relationship Management • Stakeholder Management
-• Business Analysis • Data-Driven Decision Making
-• Advanced Excel • AWS QuickSight • Tableau • SQL
-
-ACHIEVEMENTS
-• Ranked #1 in productivity (177% vs. team avg. 109.9%)
-• Received 'First Among Equals' award for top performance
-• 12 Rewards and Recognitions across 2024-2025
-    `
-
-    const blob = new Blob([resumeContent], { type: "text/plain" })
-    const url = window.URL.createObjectURL(blob)
     const link = document.createElement("a")
-    link.href = url
-    link.download = "Saara_Khan_Resume.txt"
+    link.href = "/resume.pdf" // Adjust the path if your PDF is elsewhere
+    link.download = "Saara - Resume.pdf"
     document.body.appendChild(link)
     link.click()
     document.body.removeChild(link)
-    window.URL.revokeObjectURL(url)
   }
 
   const skills = {
