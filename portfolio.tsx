@@ -107,7 +107,7 @@ export default function SaaraKhanPortfolio() {
 
   const downloadResume = () => {
     const link = document.createElement("a")
-    link.href = "/resume.pdf" // Adjust the path if your PDF is elsewhere
+    link.href = "resume.pdf" // Adjust the path if your PDF is elsewhere
     link.download = "Saara - Resume.pdf"
     document.body.appendChild(link)
     link.click()
@@ -358,7 +358,7 @@ export default function SaaraKhanPortfolio() {
                 <div className="absolute inset-0 bg-gradient-to-r from-rose-400 to-pink-500 rounded-2xl transform rotate-6 opacity-20"></div>
                 <div className="relative bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-2xl border border-slate-200 dark:border-slate-700">
                   <Image
-                    src="/placeholder.svg?height=300&width=250"
+                    src="/placeholder.jpg?height=300&width=250"
                     alt="Saara Khan"
                     width={250}
                     height={300}
