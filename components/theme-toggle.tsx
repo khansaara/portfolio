@@ -35,9 +35,9 @@ export function ThemeToggle() {
       className="fixed bottom-6 right-6 z-50 h-12 w-12 rounded-full shadow-lg border-2 bg-background/80 backdrop-blur-sm hover:scale-110 transition-all duration-300 hover:shadow-xl"
     >
       {isDark ? (
-        <Sun className="h-5 w-5 transition-all duration-300" />
+        <Sun className="h-5 w-5 transition-all duration-500" />
       ) : (
-        <Moon className="h-5 w-5 transition-all duration-300" />
+        <Moon className="h-5 w-5 transition-all duration-500" />
       )}
       <span className="sr-only">Toggle theme</span>
     </Button>
