@@ -337,7 +337,7 @@ export default function SaaraKhanPortfolio() {
                   <span className="text-sm">itsaarakhan@gmail.com</span>
                 </Link>
                 <Link
-                  href="tel:+918299063804"
+                  href="https://wa.me/918299063804"
                   className="flex items-center space-x-2 text-slate-600 dark:text-slate-300 hover:text-rose-600 dark:hover:text-rose-400 transition-colors"
                 >
                   <Phone className="h-4 w-4" />
