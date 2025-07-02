@@ -204,12 +204,12 @@ export default function SaaraKhanPortfolio() {
   ]
 
   const certifications = [
-    "Google Data Analytics",
-    "Google Business Intelligence",
-    "Google Project Management",
-    "Macquarie University Excel",
-    "ICLeaF SQL Course & Project",
-    "Amazon Learn Tableau",
+    { name: "Google Data Analytics", url: "https://www.coursera.org/account/accomplishments/professional-cert/PED63FZPDE7Y" },
+    { name: "Google Business Intelligence", url: "https://coursera.org/share/2eacb18ef444b5031a8dfc406ff49656" },
+    { name: "Google Project Management", url: "https://www.coursera.org/account/accomplishments/professional-cert/2RLXKMA2KN89" },
+    { name: "Macquarie University Excel", url: "https://www.coursera.org/account/accomplishments/specialization/KHS7WRFFXQTV" },
+    { name: "ICLeaF SQL Course & Project", url: "https://www.linkedin.com/in/khansaara/details/certifications/1751482523706/single-media-viewer/?profileId=ACoAADacwaEBcWYNPmflKPQ55TNZ22rutYC2_WI" },
+    { name: "Amazon Learn Tableau", url: "https://www.linkedin.com/in/khansaara/details/certifications/1751483219107/single-media-viewer/?profileId=ACoAADacwaEBcWYNPmflKPQ55TNZ22rutYC2_WI" },
   ]
 
   const achievements = [
@@ -594,13 +594,16 @@ export default function SaaraKhanPortfolio() {
                 </h3>
                 <div className="space-y-3">
                   {certifications.map((cert, index) => (
-                    <div
+                    <Link
                       key={index}
-                      className="flex items-center space-x-3 p-3 rounded-lg bg-white/80 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 hover:shadow-md transition-all duration-200"
+                      href={cert.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center space-x-3 p-3 rounded-lg bg-white/80 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 hover:shadow-md transition-all duration-200 hover:bg-rose-50 dark:hover:bg-rose-900"
                     >
                       <div className="w-2 h-2 bg-rose-500 rounded-full"></div>
-                      <span className="text-slate-700 dark:text-slate-300">{cert}</span>
-                    </div>
+                      <span className="text-slate-700 dark:text-slate-300">{cert.name}</span>
+                    </Link>
                   ))}
                 </div>
               </div>
