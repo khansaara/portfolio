@@ -1,6 +1,9 @@
 {
   "name": "my-v0-project",
   "version": "0.1.0",
+  
+  "homepage": "https://khansaara.github.io/my-profile-site",
+
   "private": true,
   "scripts": {
     "build": "next build",
