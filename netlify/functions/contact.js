@@ -1,18 +1,7 @@
 const nodemailer = require('nodemailer');
 
 exports.handler = async function(event) {
-  if (event.httpMethod !== 'POST') {
-    return {
-      statusCode: 405,
-      headers: {
-        'Access-Control-Allow-Origin': '*', // Allow all origins (or specify your domain)
-        'Access-Control-Allow-Headers': 'Content-Type',
-      },
-      body: JSON.stringify({ message: 'Method not allowed' }),
-    };
-  }
-
-  // Handle preflight OPTIONS request
+  // Handle preflight OPTIONS request FIRST
   if (event.httpMethod === 'OPTIONS') {
     return {
       statusCode: 200,
@@ -22,6 +11,18 @@ exports.handler = async function(event) {
         'Access-Control-Allow-Methods': 'POST, OPTIONS',
       },
       body: '',
+    };
+  }
+
+  // Now check for POST
+  if (event.httpMethod !== 'POST') {
+    return {
+      statusCode: 405,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': 'Content-Type',
+      },
+      body: JSON.stringify({ message: 'Method not allowed' }),
     };
   }
 
