@@ -358,7 +358,7 @@ export default function SaaraKhanPortfolio() {
                 <div className="absolute inset-0 bg-gradient-to-r from-rose-400 to-pink-500 rounded-2xl transform rotate-6 opacity-20"></div>
                 <div className="relative bg-white dark:bg-slate-800 rounded-2xl p-8 shadow-2xl border border-slate-200 dark:border-slate-700">
                   <Image
-                    src="photo.png?height=300&width=250"
+                    src="photo.jpg?height=300&width=250"
                     alt="Saara Khan"
                     width={250}
                     height={300}
