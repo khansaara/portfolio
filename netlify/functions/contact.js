@@ -4,7 +4,24 @@ exports.handler = async function(event) {
   if (event.httpMethod !== 'POST') {
     return {
       statusCode: 405,
+      headers: {
+        'Access-Control-Allow-Origin': '*', // Allow all origins (or specify your domain)
+        'Access-Control-Allow-Headers': 'Content-Type',
+      },
       body: JSON.stringify({ message: 'Method not allowed' }),
+    };
+  }
+
+  // Handle preflight OPTIONS request
+  if (event.httpMethod === 'OPTIONS') {
+    return {
+      statusCode: 200,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': 'Content-Type',
+        'Access-Control-Allow-Methods': 'POST, OPTIONS',
+      },
+      body: '',
     };
   }
 
@@ -33,12 +50,20 @@ exports.handler = async function(event) {
 
     return {
       statusCode: 200,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': 'Content-Type',
+      },
       body: JSON.stringify({ message: "Thank you for your message! I'll get back to you soon." }),
     };
   } catch (error) {
     console.error(error);
     return {
       statusCode: 500,
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Headers': 'Content-Type',
+      },
       body: JSON.stringify({ message: "Something went wrong. Please try again later." }),
     };
   }
