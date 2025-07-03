@@ -27,7 +27,7 @@ export function ContactSection() {
     setIsSubmitting(true)
 
     try {
-      const res = await fetch('/api/contact', {
+      const res = await fetch('https://jocular-manatee-313aa7.netlify.app/.netlify/functions/contact/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(contactForm),
