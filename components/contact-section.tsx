@@ -26,10 +26,18 @@ export function ContactSection() {
     e.preventDefault()
     setIsSubmitting(true)
 
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 2000))
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(contactForm),
+      })
+      const data = await res.json()
+      setSubmitMessage(data.message)
+    } catch (error) {
+      setSubmitMessage("Something went wrong. Please try again later.")
+    }
 
-    setSubmitMessage("Thank you for your message! I'll get back to you soon.")
     setContactForm({
       firstName: "",
       lastName: "",
@@ -38,8 +46,6 @@ export function ContactSection() {
       message: "",
     })
     setIsSubmitting(false)
-
-    // Clear success message after 5 seconds
     setTimeout(() => setSubmitMessage(""), 5000)
   }
 
