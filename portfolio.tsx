@@ -174,7 +174,7 @@ export default function SaaraKhanPortfolio() {
       achievements: [
         "Led team performance initiatives, improving headcount efficiency from 2.88 to 4.12",
         "Conducted weekly/monthly business reviews for AU/ZA Retail",
-        "Managed 20+ L2 associates with manager rating of 4.8/5",
+        "Managed 10+ L2 associates with manager rating of 4.8/5",
         "Improved team productivity from 99% to 112% through coaching",
       ],
     },
@@ -187,7 +187,7 @@ export default function SaaraKhanPortfolio() {
         "Served as interim lead managing scorecards and performance reviews",
         "Automated data workflows using Excel and built visualizations in AWS QuickSight",
         "Led High Visibility Events coordination as Subject Matter Expert",
-        "Supported team of 50+ associates as Performance Improvement Coach",
+        "Supported team of 10+ associates as Performance Improvement Coach",
       ],
     },
     {
