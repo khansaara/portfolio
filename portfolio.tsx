@@ -396,7 +396,7 @@ export default function SaaraKhanPortfolio() {
                 </CardHeader>
                 <CardContent>
                   <p className="text-slate-600 dark:text-slate-300">
-                    Led teams of 20+ associates with a 4.8/5 manager rating, improving productivity by 13%
+                    Led teams of 5+ associates with a 4.8/5 manager rating, improving productivity by 13%
                   </p>
                 </CardContent>
               </Card>
